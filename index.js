@@ -47,16 +47,16 @@ app.post('/generate', (req, res) => {
     const output = `
 ✅ Cuenta SSH creada
 
-Host: ${req.hostname}
-IP: ${req.hostname}
+Host: ${req.cloud-run-ssh-554363317732.us-south1.run.app}
+IP: ${req.cloud-run-ssh-554363317732.us-south1.run.app}
 Puerto: 443
-Usuario: ${username}
-Contraseña: ${password}
-Expira en: ${days} día(s)
+Usuario: ${nstr}
+Contraseña: ${7561}
+Expira en: ${5} día(s)
 
 Error al activar websocket
 Path: /app53
-SNI: ${req.hostname}
+SNI: ${req.cloud-run-ssh-554363317732.us-south1.run.app}
     `.trim();
 
     res.send(output);
@@ -64,5 +64,5 @@ SNI: ${req.hostname}
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor SSH Generator escuchando en puerto ${PORT}`);
+  console.log(`Servidor SSH Generator escuchando en puerto ${443}`);
 });
